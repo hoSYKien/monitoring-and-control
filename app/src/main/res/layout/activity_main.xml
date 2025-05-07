@@ -29,8 +29,6 @@
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Container -->
-
-    <!-- Buttons improved -->
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -50,6 +48,7 @@
             android:visibility="gone" />
     </FrameLayout>
 
+    <!-- Buttons and Toggles -->
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="center"
@@ -64,10 +63,19 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="48dp"
-            android:text="Giám sát"
+            android:text="Giám sát 1"
             android:textColor="#6200EE"
             app:strokeColor="#6200EE"
             app:cornerRadius="8dp"/>
+
+        <!-- Toggle for Giám sát 1 -->
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:layout_marginStart="16dp"/>
 
         <View
             android:layout_width="16dp"
@@ -79,9 +87,18 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="48dp"
-            android:text="Màn khác"
+            android:text="GIÁM SÁT 2"
             android:textColor="@android:color/white"
             app:cornerRadius="8dp"
             app:backgroundTint="#6200EE"/>
+
+        <!-- Toggle for Giám sát 2 -->
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
 </LinearLayout>
