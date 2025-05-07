@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <!-- Header improved -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="#6200EE">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="Break Lucifer"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-condensed"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Container -->
+
+    <!-- Buttons improved -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_weight="1">
+
+        <!-- include màn A -->
+        <include
+            android:id="@+id/layoutMonitoring"
+            layout="@layout/screen_monitoring" />
+
+        <!-- include màn B, ẩn ban đầu -->
+        <include
+            android:id="@+id/layoutMonitoring2"
+            layout="@layout/screen_monitoring_2"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowMonitoring"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="Giám sát"
+            android:textColor="#6200EE"
+            app:strokeColor="#6200EE"
+            app:cornerRadius="8dp"/>
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowOther"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="Màn khác"
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#6200EE"/>
+    </LinearLayout>
+</LinearLayout>
