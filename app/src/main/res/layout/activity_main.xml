@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -36,15 +35,21 @@
         android:layout_marginHorizontal="16dp"
         android:layout_weight="1">
 
-        <!-- include màn A -->
+        <!-- Include màn giám sát 1 -->
         <include
             android:id="@+id/layoutMonitoring"
             layout="@layout/screen_monitoring" />
 
-        <!-- include màn B, ẩn ban đầu -->
+        <!-- Include màn giám sát 2 -->
         <include
             android:id="@+id/layoutMonitoring2"
             layout="@layout/screen_monitoring_2"
+            android:visibility="gone" />
+
+        <!-- Include giao diện energy_monitor_activity -->
+        <include
+            android:id="@+id/energyMonitorActivity"
+            layout="@layout/energy_monitor_activity"
             android:visibility="gone" />
     </FrameLayout>
 
@@ -54,51 +59,60 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="10dp"
         android:background="@android:color/white">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnShowMonitoring"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="65dp"
             android:layout_height="48dp"
-            android:text="Giám sát 1"
+            android:text="GS1"
             android:textColor="#6200EE"
             app:strokeColor="#6200EE"
             app:cornerRadius="8dp"/>
 
-        <!-- Toggle for Giám sát 1 -->
         <ToggleButton
             android:id="@+id/toggleButton1"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:textOn="ON"
-            android:textOff="OFF"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="16dp"
+            android:textOff="OFF 1"
+            android:textOn="ON 1"
+            app:cornerRadius="8dp" />
 
         <View
-            android:layout_width="16dp"
+            android:layout_width="15dp"
             android:layout_height="0dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnShowOther"
             style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="65dp"
             android:layout_height="48dp"
-            android:text="GIÁM SÁT 2"
+            android:text="GS 2"
             android:textColor="@android:color/white"
-            app:cornerRadius="8dp"
-            app:backgroundTint="#6200EE"/>
+            app:backgroundTint="#6200EE"
+            app:cornerRadius="8dp" />
 
-        <!-- Toggle for Giám sát 2 -->
         <ToggleButton
             android:id="@+id/toggleButton2"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:textOn="ON"
-            android:textOff="OFF"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="16dp"
+            android:textOff="OFF 2"
+            android:textOn="ON 2"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGST"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="GST"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#6200EE"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="8dp"/>
     </LinearLayout>
 </LinearLayout>
